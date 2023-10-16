@@ -2,15 +2,13 @@
 <canvas type="2d" id="myCanvas" disable-scroll bind:touchstart="handleTouchStart" bind:touchmove="handleTouchMove" bind:touchend="handleTouchEnd" bind:longtap="handleLongTap" class="canvas-container"></canvas>
 
 <view class="tool-container">
-	<slider min="1" max="15" show-value block-size="12" 
-	value="{{CanvasWidth}}"
-	block-color="#47484c" bind:change="handleChange" hidden="{{ishidden}}" class="slider-container"></slider>
+	<slider min="1" max="15" show-value block-size="12" value="{{CanvasWidth}}" block-color="#47484c" bind:change="handleChange" hidden="{{ishidden}}" class="slider-container"></slider>
 	<!-- 笔粗细 -->
-	<view class='box box2' bindtap='penSelect'></view>
+	<view class='box box2 {{ishidden===false?"selected":""}}' bindtap='penSelect' hover-class="selected-hover"></view>
 	<!-- 红色笔 -->
-	<view class='box box3' bindtap='colorSelect' data-param='#c03'></view>
+	<view class='box box3 {{strokeStyle==="#c03"? "selected":""}}' bindtap='colorSelect' data-param='#c03' hover-class="selected-hover"></view>
 	<!-- 黄色笔 -->
-	<view class='box box4' bindtap='colorSelect' data-param='#f90'></view>
+	<view class='box box4 {{strokeStyle ==="#f90" ? "selected":""}}' bindtap='colorSelect' data-param='#f90' hover-class="selected-hover"></view>
 	<!-- 橡皮 -->
-	<view class='box box5' bindtap='clearCanvas'></view>
+	<view class='box box5 {{ strokeStyle==="#bbb" ? "selected":""}}' bindtap='clearCanvas' hover-class="selected-hover"></view>
 </view>

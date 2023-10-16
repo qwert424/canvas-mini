@@ -107,7 +107,6 @@ Page({
         ishidden:true
       })
     }
-   
   },
   // 橡皮檫
   clearCanvas() {
