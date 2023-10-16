@@ -1,0 +1,14 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f9d27d",
+    "navigationBarTitleText": "小天才 画布",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
